@@ -1,0 +1,20 @@
+F:\codes\REAL PROJECTS\StockCounter\StockCounter\StockCounter\bin\Release\StockCounter.exe.config
+F:\codes\REAL PROJECTS\StockCounter\StockCounter\StockCounter\bin\Release\StockCounter.exe
+F:\codes\REAL PROJECTS\StockCounter\StockCounter\StockCounter\bin\Release\StockCounter.pdb
+F:\codes\REAL PROJECTS\StockCounter\StockCounter\StockCounter\obj\Release\StockCounter.csprojAssemblyReference.cache
+F:\codes\REAL PROJECTS\StockCounter\StockCounter\StockCounter\obj\Release\StockCounter.Form1.resources
+F:\codes\REAL PROJECTS\StockCounter\StockCounter\StockCounter\obj\Release\StockCounter.Properties.Resources.resources
+F:\codes\REAL PROJECTS\StockCounter\StockCounter\StockCounter\obj\Release\StockCounter.csproj.GenerateResource.cache
+F:\codes\REAL PROJECTS\StockCounter\StockCounter\StockCounter\obj\Release\StockCounter.csproj.CoreCompileInputs.cache
+F:\codes\REAL PROJECTS\StockCounter\StockCounter\StockCounter\obj\Release\StockCounter.exe
+F:\codes\REAL PROJECTS\StockCounter\StockCounter\StockCounter\obj\Release\StockCounter.pdb
+C:\Users\robbe\Desktop\stockcounter\StockCounter\StockCounter\StockCounter\bin\Release\StockCounter.exe.config
+C:\Users\robbe\Desktop\stockcounter\StockCounter\StockCounter\StockCounter\bin\Release\StockCounter.exe
+C:\Users\robbe\Desktop\stockcounter\StockCounter\StockCounter\StockCounter\bin\Release\StockCounter.pdb
+C:\Users\robbe\Desktop\stockcounter\StockCounter\StockCounter\StockCounter\obj\Release\StockCounter.csprojAssemblyReference.cache
+C:\Users\robbe\Desktop\stockcounter\StockCounter\StockCounter\StockCounter\obj\Release\StockCounter.Form1.resources
+C:\Users\robbe\Desktop\stockcounter\StockCounter\StockCounter\StockCounter\obj\Release\StockCounter.Properties.Resources.resources
+C:\Users\robbe\Desktop\stockcounter\StockCounter\StockCounter\StockCounter\obj\Release\StockCounter.csproj.GenerateResource.cache
+C:\Users\robbe\Desktop\stockcounter\StockCounter\StockCounter\StockCounter\obj\Release\StockCounter.csproj.CoreCompileInputs.cache
+C:\Users\robbe\Desktop\stockcounter\StockCounter\StockCounter\StockCounter\obj\Release\StockCounter.exe
+C:\Users\robbe\Desktop\stockcounter\StockCounter\StockCounter\StockCounter\obj\Release\StockCounter.pdb

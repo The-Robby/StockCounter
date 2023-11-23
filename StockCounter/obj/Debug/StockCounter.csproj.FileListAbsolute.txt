@@ -1,0 +1,30 @@
+F:\codes\REAL PROJECTS\StockCounter\StockCounter\StockCounter\bin\Debug\StockCounter.exe.config
+F:\codes\REAL PROJECTS\StockCounter\StockCounter\StockCounter\bin\Debug\StockCounter.exe
+F:\codes\REAL PROJECTS\StockCounter\StockCounter\StockCounter\bin\Debug\StockCounter.pdb
+F:\codes\REAL PROJECTS\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.csprojAssemblyReference.cache
+F:\codes\REAL PROJECTS\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.Form1.resources
+F:\codes\REAL PROJECTS\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.Properties.Resources.resources
+F:\codes\REAL PROJECTS\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.csproj.GenerateResource.cache
+F:\codes\REAL PROJECTS\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.csproj.CoreCompileInputs.cache
+F:\codes\REAL PROJECTS\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.exe
+F:\codes\REAL PROJECTS\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.pdb
+C:\Users\robbe\Desktop\stockcounter\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.exe
+C:\Users\robbe\Desktop\stockcounter\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.pdb
+C:\Users\robbe\Desktop\stockcounter\StockCounter\StockCounter\StockCounter\bin\Debug\StockCounter.exe.config
+C:\Users\robbe\Desktop\stockcounter\StockCounter\StockCounter\StockCounter\bin\Debug\StockCounter.exe
+C:\Users\robbe\Desktop\stockcounter\StockCounter\StockCounter\StockCounter\bin\Debug\StockCounter.pdb
+C:\Users\robbe\Desktop\stockcounter\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.csprojAssemblyReference.cache
+C:\Users\robbe\Desktop\stockcounter\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.Form1.resources
+C:\Users\robbe\Desktop\stockcounter\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.Properties.Resources.resources
+C:\Users\robbe\Desktop\stockcounter\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.csproj.GenerateResource.cache
+C:\Users\robbe\Desktop\stockcounter\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.csproj.CoreCompileInputs.cache
+F:\GITHUB PROJECTS\StockCounter\StockCounter\StockCounter\bin\Debug\StockCounter.exe.config
+F:\GITHUB PROJECTS\StockCounter\StockCounter\StockCounter\bin\Debug\StockCounter.exe
+F:\GITHUB PROJECTS\StockCounter\StockCounter\StockCounter\bin\Debug\StockCounter.pdb
+F:\GITHUB PROJECTS\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.csprojAssemblyReference.cache
+F:\GITHUB PROJECTS\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.Form1.resources
+F:\GITHUB PROJECTS\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.Properties.Resources.resources
+F:\GITHUB PROJECTS\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.csproj.GenerateResource.cache
+F:\GITHUB PROJECTS\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.csproj.CoreCompileInputs.cache
+F:\GITHUB PROJECTS\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.exe
+F:\GITHUB PROJECTS\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.pdb
