@@ -94,15 +94,16 @@
             // 
             // amnt_prod
             // 
-            this.amnt_prod.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.productBEBindingSource, "StockCount", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N0"));
-            this.amnt_prod.Location = new System.Drawing.Point(544, 134);
+            this.amnt_prod.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.correctMainBindingSource, "StockCount", true));
+            this.amnt_prod.Location = new System.Drawing.Point(725, 165);
+            this.amnt_prod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.amnt_prod.Maximum = new decimal(new int[] {
             200,
             0,
             0,
             0});
             this.amnt_prod.Name = "amnt_prod";
-            this.amnt_prod.Size = new System.Drawing.Size(120, 20);
+            this.amnt_prod.Size = new System.Drawing.Size(160, 22);
             this.amnt_prod.TabIndex = 2;
             this.amnt_prod.ValueChanged += new System.EventHandler(this.amnt_prod_ValueChanged);
             // 
@@ -119,36 +120,40 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(195, 76);
+            this.label1.Location = new System.Drawing.Point(260, 94);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 13);
+            this.label1.Size = new System.Drawing.Size(107, 16);
             this.label1.TabIndex = 4;
             this.label1.Text = "Name of product";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(195, 33);
+            this.label2.Location = new System.Drawing.Point(260, 41);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(286, 13);
+            this.label2.Size = new System.Drawing.Size(353, 16);
             this.label2.TabIndex = 5;
             this.label2.Text = "Scan the barcode and triple check you didn\'t alter the scan";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(195, 117);
+            this.label3.Location = new System.Drawing.Point(260, 144);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 13);
+            this.label3.Size = new System.Drawing.Size(102, 16);
             this.label3.TabIndex = 6;
             this.label3.Text = "Type of product";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(544, 118);
+            this.label4.Location = new System.Drawing.Point(725, 145);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 13);
+            this.label4.Size = new System.Drawing.Size(101, 16);
             this.label4.TabIndex = 7;
             this.label4.Text = "Amount in stock";
             // 
@@ -157,9 +162,10 @@
             this.name_prod.DataSource = this.correctMainBindingSource;
             this.name_prod.DisplayMember = "Name";
             this.name_prod.FormattingEnabled = true;
-            this.name_prod.Location = new System.Drawing.Point(194, 92);
+            this.name_prod.Location = new System.Drawing.Point(259, 113);
+            this.name_prod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.name_prod.Name = "name_prod";
-            this.name_prod.Size = new System.Drawing.Size(306, 21);
+            this.name_prod.Size = new System.Drawing.Size(407, 24);
             this.name_prod.TabIndex = 8;
             this.name_prod.SelectedIndexChanged += new System.EventHandler(this.name_prod_SelectedIndexChanged);
             // 
@@ -173,20 +179,22 @@
             this.bar_prod.DataSource = this.correctMainBindingSource;
             this.bar_prod.DisplayMember = "Barcode";
             this.bar_prod.FormattingEnabled = true;
-            this.bar_prod.Location = new System.Drawing.Point(194, 49);
+            this.bar_prod.Location = new System.Drawing.Point(259, 60);
+            this.bar_prod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bar_prod.Name = "bar_prod";
-            this.bar_prod.Size = new System.Drawing.Size(306, 21);
+            this.bar_prod.Size = new System.Drawing.Size(407, 24);
             this.bar_prod.TabIndex = 9;
-            this.bar_prod.SelectedIndexChanged += new System.EventHandler(this.bar_prod_SelectedIndexChanged);
+            this.bar_prod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bar_prod_KeyDown);
             // 
             // type_prod
             // 
             this.type_prod.DataSource = this.typesBEBindingSource;
             this.type_prod.DisplayMember = "Type";
             this.type_prod.FormattingEnabled = true;
-            this.type_prod.Location = new System.Drawing.Point(194, 133);
+            this.type_prod.Location = new System.Drawing.Point(259, 164);
+            this.type_prod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.type_prod.Name = "type_prod";
-            this.type_prod.Size = new System.Drawing.Size(306, 21);
+            this.type_prod.Size = new System.Drawing.Size(407, 24);
             this.type_prod.TabIndex = 10;
             // 
             // typesBEBindingSource
@@ -203,9 +211,10 @@
             // 
             this.btn_save.BackColor = System.Drawing.Color.LimeGreen;
             this.btn_save.FlatAppearance.BorderColor = System.Drawing.Color.LimeGreen;
-            this.btn_save.Location = new System.Drawing.Point(44, 12);
+            this.btn_save.Location = new System.Drawing.Point(59, 15);
+            this.btn_save.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(75, 44);
+            this.btn_save.Size = new System.Drawing.Size(100, 54);
             this.btn_save.TabIndex = 11;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = false;
@@ -214,9 +223,10 @@
             // btn_connect
             // 
             this.btn_connect.BackColor = System.Drawing.Color.LimeGreen;
-            this.btn_connect.Location = new System.Drawing.Point(44, 76);
+            this.btn_connect.Location = new System.Drawing.Point(59, 94);
+            this.btn_connect.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_connect.Name = "btn_connect";
-            this.btn_connect.Size = new System.Drawing.Size(75, 46);
+            this.btn_connect.Size = new System.Drawing.Size(100, 57);
             this.btn_connect.TabIndex = 12;
             this.btn_connect.Text = "Connect with DB";
             this.btn_connect.UseVisualStyleBackColor = false;
@@ -226,9 +236,10 @@
             // 
             this.lblIfConnected.AutoSize = true;
             this.lblIfConnected.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::StockCounter.Properties.Settings.Default, "Connectionlbl", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.lblIfConnected.Location = new System.Drawing.Point(44, 125);
+            this.lblIfConnected.Location = new System.Drawing.Point(59, 154);
+            this.lblIfConnected.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIfConnected.Name = "lblIfConnected";
-            this.lblIfConnected.Size = new System.Drawing.Size(92, 13);
+            this.lblIfConnected.Size = new System.Drawing.Size(113, 16);
             this.lblIfConnected.TabIndex = 13;
             this.lblIfConnected.Text = global::StockCounter.Properties.Settings.Default.Connectionlbl;
             this.lblIfConnected.Click += new System.EventHandler(this.lblIfConnected_Click);
@@ -240,9 +251,10 @@
             // btn_update
             // 
             this.btn_update.BackColor = System.Drawing.Color.LimeGreen;
-            this.btn_update.Location = new System.Drawing.Point(44, 141);
+            this.btn_update.Location = new System.Drawing.Point(59, 174);
+            this.btn_update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(75, 46);
+            this.btn_update.Size = new System.Drawing.Size(100, 57);
             this.btn_update.TabIndex = 14;
             this.btn_update.Text = "Update DB";
             this.btn_update.UseVisualStyleBackColor = false;
@@ -263,10 +275,11 @@
             this.Type,
             this.Leverancier});
             this.dataGridView1.DataSource = this.correctMainBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(44, 209);
+            this.dataGridView1.Location = new System.Drawing.Point(59, 257);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(707, 460);
+            this.dataGridView1.Size = new System.Drawing.Size(943, 566);
             this.dataGridView1.TabIndex = 15;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -276,7 +289,7 @@
             this.barcodeDataGridViewTextBoxColumn.HeaderText = "Barcode";
             this.barcodeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.barcodeDataGridViewTextBoxColumn.Name = "barcodeDataGridViewTextBoxColumn";
-            this.barcodeDataGridViewTextBoxColumn.Width = 72;
+            this.barcodeDataGridViewTextBoxColumn.Width = 85;
             // 
             // nameDataGridViewTextBoxColumn
             // 
@@ -284,7 +297,7 @@
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 60;
+            this.nameDataGridViewTextBoxColumn.Width = 70;
             // 
             // hulpnummerDataGridViewTextBoxColumn
             // 
@@ -292,7 +305,7 @@
             this.hulpnummerDataGridViewTextBoxColumn.HeaderText = "Hulpnummer";
             this.hulpnummerDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.hulpnummerDataGridViewTextBoxColumn.Name = "hulpnummerDataGridViewTextBoxColumn";
-            this.hulpnummerDataGridViewTextBoxColumn.Width = 91;
+            this.hulpnummerDataGridViewTextBoxColumn.Width = 109;
             // 
             // stockCountDataGridViewTextBoxColumn
             // 
@@ -300,21 +313,21 @@
             this.stockCountDataGridViewTextBoxColumn.HeaderText = "StockCount";
             this.stockCountDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.stockCountDataGridViewTextBoxColumn.Name = "stockCountDataGridViewTextBoxColumn";
-            this.stockCountDataGridViewTextBoxColumn.Width = 88;
+            this.stockCountDataGridViewTextBoxColumn.Width = 101;
             // 
             // Type
             // 
             this.Type.DataPropertyName = "Type";
             this.Type.HeaderText = "Type";
             this.Type.Name = "Type";
-            this.Type.Width = 56;
+            this.Type.Width = 65;
             // 
             // Leverancier
             // 
             this.Leverancier.DataPropertyName = "Leverancier";
             this.Leverancier.HeaderText = "Leverancier";
             this.Leverancier.Name = "Leverancier";
-            this.Leverancier.Width = 88;
+            this.Leverancier.Width = 104;
             // 
             // productBEBindingSource1
             // 
@@ -324,27 +337,30 @@
             // label_update
             // 
             this.label_update.AutoSize = true;
-            this.label_update.Location = new System.Drawing.Point(44, 190);
+            this.label_update.Location = new System.Drawing.Point(59, 234);
+            this.label_update.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_update.Name = "label_update";
-            this.label_update.Size = new System.Drawing.Size(154, 13);
+            this.label_update.Size = new System.Drawing.Size(192, 16);
             this.label_update.TabIndex = 16;
             this.label_update.Text = "Only for name or type changes!";
             // 
             // label_save
             // 
             this.label_save.AutoSize = true;
-            this.label_save.Location = new System.Drawing.Point(44, 60);
+            this.label_save.Location = new System.Drawing.Point(59, 74);
+            this.label_save.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_save.Name = "label_save";
-            this.label_save.Size = new System.Drawing.Size(96, 13);
+            this.label_save.Size = new System.Drawing.Size(118, 16);
             this.label_save.TabIndex = 17;
             this.label_save.Text = "Only for new items!";
             // 
             // btn_remove_one
             // 
             this.btn_remove_one.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn_remove_one.Location = new System.Drawing.Point(948, 12);
+            this.btn_remove_one.Location = new System.Drawing.Point(1264, 15);
+            this.btn_remove_one.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_remove_one.Name = "btn_remove_one";
-            this.btn_remove_one.Size = new System.Drawing.Size(171, 163);
+            this.btn_remove_one.Size = new System.Drawing.Size(228, 201);
             this.btn_remove_one.TabIndex = 18;
             this.btn_remove_one.Text = "Remove 1 out of storage";
             this.btn_remove_one.UseVisualStyleBackColor = false;
@@ -353,9 +369,10 @@
             // btn_refresh
             // 
             this.btn_refresh.BackColor = System.Drawing.Color.LimeGreen;
-            this.btn_refresh.Location = new System.Drawing.Point(227, 163);
+            this.btn_refresh.Location = new System.Drawing.Point(303, 201);
+            this.btn_refresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_refresh.Name = "btn_refresh";
-            this.btn_refresh.Size = new System.Drawing.Size(110, 40);
+            this.btn_refresh.Size = new System.Drawing.Size(147, 49);
             this.btn_refresh.TabIndex = 19;
             this.btn_refresh.Text = "Refresh";
             this.btn_refresh.UseVisualStyleBackColor = false;
@@ -364,9 +381,10 @@
             // btn_delete
             // 
             this.btn_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn_delete.Location = new System.Drawing.Point(343, 163);
+            this.btn_delete.Location = new System.Drawing.Point(457, 201);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(110, 40);
+            this.btn_delete.Size = new System.Drawing.Size(147, 49);
             this.btn_delete.TabIndex = 20;
             this.btn_delete.Text = "Delete product";
             this.btn_delete.UseVisualStyleBackColor = false;
@@ -375,9 +393,10 @@
             // btn_check_low
             // 
             this.btn_check_low.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn_check_low.Location = new System.Drawing.Point(670, 116);
+            this.btn_check_low.Location = new System.Drawing.Point(893, 143);
+            this.btn_check_low.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_check_low.Name = "btn_check_low";
-            this.btn_check_low.Size = new System.Drawing.Size(120, 40);
+            this.btn_check_low.Size = new System.Drawing.Size(160, 49);
             this.btn_check_low.TabIndex = 21;
             this.btn_check_low.Text = "Check which ones are low on stock";
             this.btn_check_low.UseVisualStyleBackColor = false;
@@ -388,10 +407,10 @@
             this.lever_prod.DataSource = this.leverancierBEBindingSource;
             this.lever_prod.DisplayMember = "Leverancier";
             this.lever_prod.FormattingEnabled = true;
-            this.lever_prod.Location = new System.Drawing.Point(544, 49);
-            this.lever_prod.Margin = new System.Windows.Forms.Padding(2);
+            this.lever_prod.Location = new System.Drawing.Point(725, 60);
+            this.lever_prod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lever_prod.Name = "lever_prod";
-            this.lever_prod.Size = new System.Drawing.Size(224, 21);
+            this.lever_prod.Size = new System.Drawing.Size(297, 24);
             this.lever_prod.TabIndex = 22;
             // 
             // leverancierBEBindingSource
@@ -404,19 +423,18 @@
             this.hulpnr_prod.DataSource = this.correctMainBindingSource;
             this.hulpnr_prod.DisplayMember = "Hulpnummer";
             this.hulpnr_prod.FormattingEnabled = true;
-            this.hulpnr_prod.Location = new System.Drawing.Point(544, 90);
-            this.hulpnr_prod.Margin = new System.Windows.Forms.Padding(2);
+            this.hulpnr_prod.Location = new System.Drawing.Point(725, 111);
+            this.hulpnr_prod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.hulpnr_prod.Name = "hulpnr_prod";
-            this.hulpnr_prod.Size = new System.Drawing.Size(224, 21);
+            this.hulpnr_prod.Size = new System.Drawing.Size(297, 24);
             this.hulpnr_prod.TabIndex = 23;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(544, 33);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(725, 41);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 13);
+            this.label5.Size = new System.Drawing.Size(79, 16);
             this.label5.TabIndex = 24;
             this.label5.Text = "Leverancier";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -424,10 +442,9 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(544, 76);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(725, 94);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 13);
+            this.label6.Size = new System.Drawing.Size(84, 16);
             this.label6.TabIndex = 25;
             this.label6.Text = "Hulpnummer";
             // 
@@ -446,9 +463,10 @@
             // 
             // checkstock_prod
             // 
-            this.checkstock_prod.Location = new System.Drawing.Point(775, 128);
+            this.checkstock_prod.Location = new System.Drawing.Point(1033, 158);
+            this.checkstock_prod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkstock_prod.Name = "checkstock_prod";
-            this.checkstock_prod.Size = new System.Drawing.Size(34, 20);
+            this.checkstock_prod.Size = new System.Drawing.Size(45, 22);
             this.checkstock_prod.TabIndex = 26;
             this.checkstock_prod.Value = new decimal(new int[] {
             2,
@@ -467,9 +485,10 @@
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.typeDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.typesBEBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(757, 209);
+            this.dataGridView2.Location = new System.Drawing.Point(1009, 257);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(178, 460);
+            this.dataGridView2.Size = new System.Drawing.Size(237, 566);
             this.dataGridView2.TabIndex = 27;
             // 
             // typeDataGridViewTextBoxColumn
@@ -478,7 +497,7 @@
             this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
             this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
             this.typeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.typeDataGridViewTextBoxColumn.Width = 56;
+            this.typeDataGridViewTextBoxColumn.Width = 65;
             // 
             // dataGridView3
             // 
@@ -491,10 +510,11 @@
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.leverancierDataGridViewTextBoxColumn});
             this.dataGridView3.DataSource = this.leverancierBEBindingSource;
-            this.dataGridView3.Location = new System.Drawing.Point(941, 209);
+            this.dataGridView3.Location = new System.Drawing.Point(1255, 257);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.Size = new System.Drawing.Size(178, 460);
+            this.dataGridView3.Size = new System.Drawing.Size(237, 566);
             this.dataGridView3.TabIndex = 28;
             // 
             // leverancierDataGridViewTextBoxColumn
@@ -503,14 +523,15 @@
             this.leverancierDataGridViewTextBoxColumn.HeaderText = "Leverancier";
             this.leverancierDataGridViewTextBoxColumn.Name = "leverancierDataGridViewTextBoxColumn";
             this.leverancierDataGridViewTextBoxColumn.ReadOnly = true;
-            this.leverancierDataGridViewTextBoxColumn.Width = 88;
+            this.leverancierDataGridViewTextBoxColumn.Width = 104;
             // 
             // btn_delLev
             // 
             this.btn_delLev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn_delLev.Location = new System.Drawing.Point(941, 184);
+            this.btn_delLev.Location = new System.Drawing.Point(1255, 226);
+            this.btn_delLev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_delLev.Name = "btn_delLev";
-            this.btn_delLev.Size = new System.Drawing.Size(106, 24);
+            this.btn_delLev.Size = new System.Drawing.Size(141, 30);
             this.btn_delLev.TabIndex = 30;
             this.btn_delLev.Text = "Delete Leverancier";
             this.btn_delLev.UseVisualStyleBackColor = false;
@@ -519,9 +540,10 @@
             // btn_delType
             // 
             this.btn_delType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn_delType.Location = new System.Drawing.Point(757, 184);
+            this.btn_delType.Location = new System.Drawing.Point(1009, 226);
+            this.btn_delType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_delType.Name = "btn_delType";
-            this.btn_delType.Size = new System.Drawing.Size(106, 24);
+            this.btn_delType.Size = new System.Drawing.Size(141, 30);
             this.btn_delType.TabIndex = 32;
             this.btn_delType.Text = "Delete Type";
             this.btn_delType.UseVisualStyleBackColor = false;
@@ -533,10 +555,10 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
-            this.ClientSize = new System.Drawing.Size(1131, 690);
+            this.ClientSize = new System.Drawing.Size(1508, 849);
             this.Controls.Add(this.btn_delType);
             this.Controls.Add(this.btn_delLev);
             this.Controls.Add(this.dataGridView3);
@@ -565,6 +587,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.amnt_prod);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Stock Counter";
             this.Load += new System.EventHandler(this.Form1_Load);

@@ -28,3 +28,14 @@ F:\GITHUB PROJECTS\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter
 F:\GITHUB PROJECTS\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.csproj.CoreCompileInputs.cache
 F:\GITHUB PROJECTS\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.exe
 F:\GITHUB PROJECTS\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.pdb
+C:\Users\robbe\Desktop\StockCounter\StockCounter\StockCounter\bin\Debug\StockCounter.exe.config
+C:\Users\robbe\Desktop\StockCounter\StockCounter\StockCounter\bin\Debug\StockCounter.exe
+C:\Users\robbe\Desktop\StockCounter\StockCounter\StockCounter\bin\Debug\StockCounter.pdb
+C:\Users\robbe\Desktop\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.csprojAssemblyReference.cache
+C:\Users\robbe\Desktop\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.Form1.resources
+C:\Users\robbe\Desktop\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.Properties.Resources.resources
+C:\Users\robbe\Desktop\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.csproj.GenerateResource.cache
+C:\Users\robbe\Desktop\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.csproj.CoreCompileInputs.cache
+C:\Users\robbe\Desktop\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.exe
+C:\Users\robbe\Desktop\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.pdb
+C:\Users\robbe\Desktop\StockCounter\StockCounter\StockCounter\obj\Debug\StockCounter.UpdateConfirmationForm.resources

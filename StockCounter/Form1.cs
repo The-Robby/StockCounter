@@ -95,10 +95,34 @@ namespace StockCounter
             try
             {
                 int Stock = Convert.ToInt32(Math.Round(amnt_prod.Value, 0));
-                UpdateData(bar_prod.Text, name_prod.Text, hulpnr_prod.Text, Stock, lever_prod.Text, type_prod.Text);
-                this.correctMainTableAdapter.FillAll(this.newcnnData.CorrectMain);
-                this.leverancierBETableAdapter.FillLeverancier(this.newcnnData.LeverancierBE);
-                this.typesBETableAdapter.FillTypes(this.newcnnData.TypesBE);
+                using (var confirmationForm = new UpdateConfirmationForm())
+                {
+                    // Show the confirmation form
+                    var result = confirmationForm.ShowDialog();
+
+                    if (result == DialogResult.OK)
+                    {
+                        // User clicked OK, update the data based on the form choices
+                        UpdateData(
+                            bar_prod.Text,
+                            name_prod.Text,
+                            hulpnr_prod.Text,
+                            Stock,
+                            lever_prod.Text,
+                            type_prod.Text,
+                            confirmationForm
+                        );
+
+                        // Refresh the data in your UI
+                        this.correctMainTableAdapter.FillAll(this.newcnnData.CorrectMain);
+                        this.leverancierBETableAdapter.FillLeverancier(this.newcnnData.LeverancierBE);
+                        this.typesBETableAdapter.FillTypes(this.newcnnData.TypesBE);
+                    }
+                }
+                //UpdateData(bar_prod.Text, name_prod.Text, hulpnr_prod.Text, Stock, lever_prod.Text, type_prod.Text);
+                //this.correctMainTableAdapter.FillAll(this.newcnnData.CorrectMain);
+                //this.leverancierBETableAdapter.FillLeverancier(this.newcnnData.LeverancierBE);
+                //this.typesBETableAdapter.FillTypes(this.newcnnData.TypesBE);
             }
             //for if something went wrong or the connection didnt close properly
             catch (SqlException ex)
@@ -205,9 +229,10 @@ namespace StockCounter
             try
             {
                 //dataGridView1.DataSource = productBEBindingSource;
-                this.correctMainTableAdapter.FillAll(this.newcnnData.CorrectMain);
-                this.leverancierBETableAdapter.FillLeverancier(this.newcnnData.LeverancierBE);
-                this.typesBETableAdapter.FillTypes(this.newcnnData.TypesBE);
+                //this.correctMainTableAdapter.FillAll(this.newcnnData.CorrectMain);
+                //this.leverancierBETableAdapter.FillLeverancier(this.newcnnData.LeverancierBE);
+                //this.typesBETableAdapter.FillTypes(this.newcnnData.TypesBE);
+                dataGridView1.DataSource = correctMainBindingSource;
             }
             //catching any error if there is any
             catch (System.Exception)
@@ -389,7 +414,7 @@ namespace StockCounter
                 db.SubmitChanges();
             }
         }
-        private void UpdateData(string barcodeToUpdate, string newProductName, string newHulpnummer, int newStockCount, string newLeverancier, string newType)
+        private void UpdateData(string barcodeToUpdate, string newProductName, string newHulpnummer, int newStockCount, string newLeverancier, string newType, UpdateConfirmationForm confirmationForm)
         {
             using (var db = new ProductDataContext(Properties.Settings.Default.newcnn))
             {
@@ -416,14 +441,27 @@ namespace StockCounter
                         db.SubmitChanges(); // Save changes to ensure the new Type is added
                     }
 
-                    // Update the existing product
-                    existingProduct.Name = newProductName;
-                    existingProduct.Hulpnummer = newHulpnummer;
-                    existingProduct.StockCount = newStockCount;
-                    existingProduct.LeverancierC = leverancier;
-                    existingProduct.Types = type;
-                    existingProduct.LeverancierID = leverancier.LeverancierID; // Set the foreign key explicitly
-                    existingProduct.TypeID = type.TypeID; // Set the foreign key explicitly
+                    // Update the existing product based on user's choices
+                    if (confirmationForm.UpdateName)
+                        existingProduct.Name = newProductName;
+
+                    if (confirmationForm.UpdateHulpnummer)
+                        existingProduct.Hulpnummer = newHulpnummer;
+
+                    if (confirmationForm.UpdateType)
+                    {
+                        existingProduct.Types = type;
+                        existingProduct.TypeID = type.TypeID; // Set the foreign key explicitly
+                    }
+
+                    if (confirmationForm.UpdateLeverancier)
+                    {
+                        existingProduct.LeverancierC = leverancier;
+                        existingProduct.LeverancierID = leverancier.LeverancierID; // Set the foreign key explicitly
+                    }
+
+                    if (confirmationForm.UpdateStockCount)
+                        existingProduct.StockCount = newStockCount;
 
                     // Submit changes to the database
                     db.SubmitChanges();
@@ -435,6 +473,7 @@ namespace StockCounter
                 }
             }
         }
+
         private void DeleteData(string barcodeToDelete)
         {
             using (var db = new ProductDataContext(Properties.Settings.Default.newcnn))
@@ -519,7 +558,34 @@ namespace StockCounter
                 }
             }
         }
-            //dataTables
+        private void bar_prod_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    // Get the barcode from the TextBox
+                    string enteredBarcode = bar_prod.Text;
+
+                    // Filter the DataTable and set it as the DataSource for DataGridView
+                    dataGridView1.DataSource = GetFilteredDataTable(enteredBarcode);
+                }
+            }
+            catch (SqlException sqlEx)
+            {
+                // Handle SQL errors
+                MessageBox.Show($"SQL Error: {sqlEx.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dataGridView1.DataSource = correctMainBindingSource;
+            }
+            catch (Exception ex)
+            {
+                // Handle other exceptions
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dataGridView1.DataSource = correctMainBindingSource;
+            }
+        }
+
+        //dataTables
         public DataTable GetDataLowStock()
         {
             using (var db = new ProductDataContext(Properties.Settings.Default.newcnn))
@@ -544,6 +610,48 @@ namespace StockCounter
                 return dt;
             }
         }
+
+        private DataTable GetFilteredDataTable(string barcode)
+        {
+            using (var db = new ProductDataContext(Properties.Settings.Default.newcnn))
+            {
+                var query = from product in db.Products
+                            where product.Barcode == barcode
+                            select new
+                            {
+                                product.Barcode,
+                                product.Name,
+                                product.Hulpnummer,
+                                product.StockCount,
+                                // Omitting Type and Leverancier properties
+                            };
+
+                // Convert the LINQ query result to a DataTable
+                DataTable filteredDataTable = new DataTable();
+                filteredDataTable.Columns.Add("Barcode");
+                filteredDataTable.Columns.Add("Name");
+                filteredDataTable.Columns.Add("Hulpnummer");
+                filteredDataTable.Columns.Add("StockCount");
+
+                // Check if the query result is not null
+                if (query != null)
+                {
+                    foreach (var item in query)
+                    {
+                        filteredDataTable.Rows.Add(item.Barcode, item.Name, item.Hulpnummer, item.StockCount);
+                    }
+                }
+
+                return filteredDataTable;
+            }
+        }
+
+
+
+
+
+
+
 
 
         //accidentally double clicked and too lazy to delete.
